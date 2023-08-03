@@ -139,24 +139,36 @@ func (s *Structure) GetValue(key string) (interface{}, error) {
 	return glib.ValueFromNative(unsafe.Pointer(gVal)).GoValue()
 }
 
-func (s *Structure) GetValueArray(key string) (*ValueArrayValue, error) {
-	cKey := C.CString(key)
-	defer C.free(unsafe.Pointer(cKey))
-	gVal := C.gst_structure_get_value(s.Instance(), cKey)
-	if gVal == nil {
-		return nil, fmt.Errorf("No value exists at %s", key)
-	}
-
-	av := ValueArrayValue(glib.Value{GValue: gVal})
-	return &av, nil
-}
-
 // RemoveValue removes the value at the given key. If the key does not exist,
 // the structure is unchanged.
 func (s *Structure) RemoveValue(key string) {
 	cKey := C.CString(key)
 	defer C.free(unsafe.Pointer(cKey))
 	C.gst_structure_remove_field(s.Instance(), cKey)
+}
+
+type GArray struct {
+	data unsafe.Pointer
+	len  int
+	cap  int
+}
+
+// GetArray retrieves the GArray at key.
+func (s *Structure) GetArray(key string) (*GArray, error) {
+	cKey := C.CString(key)
+	defer C.free(unsafe.Pointer(cKey))
+
+	var gArr *C.GArray
+	ok := C.gst_structure_get_array(s.Instance(), cKey, &gArr)
+	if !gobool(ok) || gArr == nil {
+		return nil, fmt.Errorf("No array exists at %s", key)
+	}
+
+	return &GArray{
+		data: unsafe.Pointer(gArr.data),
+		len:  int(gArr.len),
+		cap:  int(gArr.alloc),
+	}, nil
 }
 
 // Values returns a map of all the values inside this structure. If values cannot be
