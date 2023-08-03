@@ -5,11 +5,9 @@
 // By default this plugin will use the credentials set in the environment at MINIO_ACCESS_KEY_ID
 // and MINIO_SECRET_ACCESS_KEY however these can also be set on the element directly.
 //
-//
 // In order to build the plugin for use by GStreamer, you can do the following:
 //
-//     $ go build -o libgstminio.so -buildmode c-shared .
-//
+//	$ go build -o libgstminio.so -buildmode c-shared .
 package main
 
 import "C"
@@ -17,8 +15,8 @@ import "C"
 import (
 	"unsafe"
 
-	"github.com/tinyzimmer/go-gst/gst"
-	"github.com/tinyzimmer/go-gst/gst/base"
+	"github.com/thesyncim/go-gst/gst"
+	"github.com/thesyncim/go-gst/gst/base"
 )
 
 // The metadata for this plugin

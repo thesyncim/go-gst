@@ -8,9 +8,9 @@ import (
 	"os/signal"
 	"time"
 
-	"github.com/tinyzimmer/go-gst/examples"
-	"github.com/tinyzimmer/go-gst/gst"
-	"github.com/tinyzimmer/go-gst/gst/app"
+	"github.com/thesyncim/go-gst/examples"
+	"github.com/thesyncim/go-gst/gst"
+	"github.com/thesyncim/go-gst/gst/app"
 )
 
 func createPipeline() (*gst.Pipeline, error) {

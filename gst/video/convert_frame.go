@@ -23,7 +23,7 @@ import (
 	"unsafe"
 
 	gopointer "github.com/mattn/go-pointer"
-	"github.com/tinyzimmer/go-gst/gst"
+	"github.com/thesyncim/go-gst/gst"
 )
 
 // ConvertSampleCallback represents a callback from a video convert opereration.

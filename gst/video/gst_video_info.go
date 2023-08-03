@@ -38,7 +38,7 @@ import (
 	"runtime"
 	"unsafe"
 
-	"github.com/tinyzimmer/go-gst/gst"
+	"github.com/thesyncim/go-gst/gst"
 )
 
 // CapsFeatureFormatInterlaced is the name of the caps feature indicating that the stream is interlaced.

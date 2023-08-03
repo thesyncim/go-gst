@@ -15,8 +15,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/tinyzimmer/go-gst/gst"
-	"github.com/tinyzimmer/go-gst/gst/pbutils"
+	"github.com/thesyncim/go-gst/gst"
+	"github.com/thesyncim/go-gst/gst/pbutils"
 )
 
 func main() {

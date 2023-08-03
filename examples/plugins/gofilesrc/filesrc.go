@@ -10,11 +10,8 @@
 //
 // In order to build the plugin for use by GStreamer, you can do the following:
 //
-//     $ go generate
-//     $ go build -o libgstgofilesrc.so -buildmode c-shared .
-//
-//
-//go:generate gst-plugin-gen
+//	$ go generate
+//	$ go build -o libgstgofilesrc.so -buildmode c-shared .
 //
 // +plugin:Name=gofilesrc
 // +plugin:Description=File plugins written in go
@@ -22,7 +19,7 @@
 // +plugin:License=gst.LicenseLGPL
 // +plugin:Source=go-gst
 // +plugin:Package=examples
-// +plugin:Origin=https://github.com/tinyzimmer/go-gst
+// +plugin:Origin=https://github.com/thesyncim/go-gst
 // +plugin:ReleaseDate=2021-01-04
 //
 // +element:Name=gofilesrc
@@ -31,6 +28,7 @@
 // +element:Subclass=base.ExtendsBaseSrc
 // +element:Interfaces=gst.InterfaceURIHandler
 //
+//go:generate gst-plugin-gen
 package main
 
 import (
@@ -40,9 +38,9 @@ import (
 	"os"
 	"strings"
 
+	"github.com/thesyncim/go-gst/gst"
+	"github.com/thesyncim/go-gst/gst/base"
 	"github.com/tinyzimmer/go-glib/glib"
-	"github.com/tinyzimmer/go-gst/gst"
-	"github.com/tinyzimmer/go-gst/gst/base"
 )
 
 // main is left unimplemented since these files are compiled to c-shared.
