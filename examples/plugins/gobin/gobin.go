@@ -4,7 +4,7 @@
 // +plugin:License=gst.LicenseLGPL
 // +plugin:Source=go-gst
 // +plugin:Package=examples
-// +plugin:Origin=https://github.com/thesyncim/go-gst
+// +plugin:Origin=https://github.com/tinyzimmer/go-gst
 // +plugin:ReleaseDate=2021-01-18
 //
 // +element:Name=gobin

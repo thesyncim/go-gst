@@ -12,7 +12,7 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/thesyncim/go-gst/gst"
+	"github.com/tinyzimmer/go-gst/gst"
 )
 
 func uintptrToGVal(p uintptr) *C.GValue { return (*C.GValue)(C.videoUtilToGValue(C.guintptr(p))) }

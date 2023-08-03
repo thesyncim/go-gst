@@ -38,9 +38,9 @@ import (
 	"os"
 	"strings"
 
-	"github.com/thesyncim/go-gst/examples"
-	"github.com/thesyncim/go-gst/gst"
 	"github.com/tinyzimmer/go-glib/glib"
+	"github.com/tinyzimmer/go-gst/examples"
+	"github.com/tinyzimmer/go-gst/gst"
 )
 
 var srcFile string

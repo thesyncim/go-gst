@@ -7,8 +7,8 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/thesyncim/go-gst/gst"
 	"github.com/tinyzimmer/go-glib/glib"
+	"github.com/tinyzimmer/go-gst/gst"
 )
 
 //export goGstBaseSrcGetCaps

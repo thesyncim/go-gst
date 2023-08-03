@@ -22,8 +22,8 @@ import (
 	"unsafe"
 
 	gopointer "github.com/mattn/go-pointer"
-	"github.com/thesyncim/go-gst/gst"
-	"github.com/thesyncim/go-gst/gst/base"
+	"github.com/tinyzimmer/go-gst/gst"
+	"github.com/tinyzimmer/go-gst/gst/base"
 )
 
 // SourceCallbacks represents callbacks to configure on an AppSource.

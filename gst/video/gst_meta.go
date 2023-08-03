@@ -9,7 +9,7 @@ import "C"
 import (
 	"unsafe"
 
-	"github.com/thesyncim/go-gst/gst"
+	"github.com/tinyzimmer/go-gst/gst"
 )
 
 // CropMetaInfo contains extra buffer metadata describing image cropping.

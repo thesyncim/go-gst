@@ -1,4 +1,4 @@
-module github.com/thesyncim/go-gst
+module github.com/tinyzimmer/go-gst
 
 go 1.16
 
